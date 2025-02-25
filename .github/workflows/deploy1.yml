@@ -23,7 +23,7 @@ steps:
 uses: actions/checkout@v2
 - name: Check if Azure App Service Exists id: check_app
 run: |
-if az webapp show --name "lola1stwebapp" --resource-group "my-first-rg" >/dev/null 2>&1; then
+if az webapp show --name "diverpracticewebapp2" --resource-group "nerodeanstorage1" >/dev/null 2>&1; then
 echo "App Service Exists."
 echo "exists=true" >> $GITHUB_ENV else
 echo "App Service does not exist. Skipping deployment."
@@ -31,6 +31,6 @@ echo "exists=false" >> $GITHUB_ENV fi
 continue-on-error: true
 - name: Deploy to Azure App Service if: env.exists == 'true'
 uses: azure/webapps-deploy@v2 with:
-app-name: "
-resource-group: "   "
+app-name:"diverpracticewebapp2"  
+resource-group: "nerodeanstorage1"
 publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }} package: .
