@@ -1,0 +1,10 @@
+{
+"name": "my_azure_project",
+"version": "1.0.0",
+"description": "This is my first project using GitHub Actions.", "scripts": {
+"start": "npx serve .",
+"test": "echo \"Running tests...\" && exit 0", "format": "prettier --write ."
+},
+"dependencies": {}, "devDependencies": {
+"prettier": "^2.3.2" }
+}
